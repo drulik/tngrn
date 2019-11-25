@@ -1,0 +1,15 @@
+<div class="row mt-5">
+  <div class="col-12 col-sm-6">
+    <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+    <h4 *ngIf="albums">Albums</h4>
+    <ul *ngIf="albums" class="list-group">
+        <li *ngFor="let album of albums" (click)="getImage(album)" class="list-group-item" [ngClass]="{ 'active': selectedAlbum && album.id == selectedAlbum.id }">{{album.title}}</li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <h4 *ngIf="images">Album's photos - {{ selectedAlbum.title }}</h4>
+    <ul class="list-group" *ngIf="images">
+      <pic *ngFor="let image of images" [image]="image" [selectedImage]="selectedImage" (imageSelected)="changePic($event)"></pic>
+    </ul>
+  </div>
+</div>
