@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Image } from 'src/app/_models';
+import { Image } from '../../_models';
 @Component({
     selector: 'pic',
     template: `

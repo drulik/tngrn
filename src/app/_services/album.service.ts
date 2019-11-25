@@ -11,7 +11,7 @@ export class AlbumService {
 
     getAllByUserId(userId:Number) {
       if (userId !== undefined) {
-        return this.http.get<Album[]>(`http://jsonplaceholder.typicode.com/albums`, 
+        return this.http.get<Album[]>(`https://jsonplaceholder.typicode.com/albums`, 
         {
           'params': {
             userId: String(userId),
