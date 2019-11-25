@@ -7,11 +7,11 @@ export class ImageService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<Image[]>(`http://jsonplaceholder.typicode.com/images`);
+        return this.http.get<Image[]>(`https://jsonplaceholder.typicode.com/images`);
     }
 
     get(id:number) {
-        return this.http.get<Image[]>(`http://jsonplaceholder.typicode.com/photos`,
+        return this.http.get<Image[]>(`https://jsonplaceholder.typicode.com/photos`,
         {
             'params': {
                 albumId: String(id)

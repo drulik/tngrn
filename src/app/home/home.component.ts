@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { first } from 'rxjs/operators';
-// import { ImageComponent } from '../_components/image/image.component'
+import { ImageComponent } from '../../_components/image/image.component'
 
-import { Album, Image } from '../_models';
+import { Album, Image } from '../../_models';
 import { AuthenticationService, AlbumService, ImageService } from '../_services';
 
 @Component({ templateUrl: 'home.component.html' })
